@@ -1,9 +1,18 @@
 <div class="page">
-  <img src="assets/logos/brand-logo-with-name.svg" class="logo "> 
 
-  <div class="input-side">
-      <input type="text" pInputText  class="input"/>
-      <p-button label="Secondary" severity="secondary" class="input-button"/>
+  <div class="left">
+    <img src="assets/logos/brand-logo-with-name.svg">
+  </div>
+  <div class="right">
+    <div class="login-side">
+      <div class="label">Log in</div>
+      <p-floatLabel class="w-full">
+        <input pInputText id="secret-key"  />
+        <label for="secret-key">Secret key</label>
+    </p-floatLabel>
+    <p-button label="Login" [raised]="true" class="w-full" />
+
+    </div>
   </div>
 
 </div>

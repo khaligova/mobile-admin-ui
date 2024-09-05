@@ -1,37 +1,56 @@
 .page {
   width: 100%;
   height: 100vh;
-  background: rgb(5, 44, 81);
-  background: radial-gradient(
-    circle,
-    rgba(5, 44, 81, 1) 38%,
-    rgba(14, 64, 143, 1) 217%
-  );
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-    
-  .logo{
-    //background-color: aqua;
-    width: 200px;
-    height: 200px;
-    flex:0.7,
-  }
-  
-  .input-side{
+  flex-direction: row;
+
+  .left {
+    //border: 1px solid red;
+    background: rgb(5, 44, 81);
+    background: radial-gradient(circle, rgba(5, 44, 81, 1) 38%, rgba(14, 64, 143, 1) 78%);
+
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex: 0.65;
+
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .right {
+    //border: 1px solid yellowgreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex: 1;
 
+    .login-side {
+      //border: 1px solid rgb(5, 44, 81);
+      padding: 12px;
+      width: 35%;
 
-    .input{
-      height: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .label{
+        margin-bottom: 12px;
+        font-size: 24px;
+        font-weight: 500;
+      }
     }
 
-
+    p-floatLabel{
+      margin-bottom: 12px;
+    }
   }
 
-
 }
-
-
