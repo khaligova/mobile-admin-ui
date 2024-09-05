@@ -10,29 +10,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
     
   .logo{
     //background-color: aqua;
-    width: 30%;
-    height: 30vh;
-    flex:0.5,
+    width: 200px;
+    height: 200px;
+    flex:0.7,
   }
-  .input{
-    width: 40%;
-    min-height: 21px;
-    max-height: 21px;
-    background: transparent;
-    margin-left: 22px !important;
-    border-bottom-color: aliceblue;
-    flex:0.5,
+  
+  .input-side{
+    display: flex;
+    flex: 1;
 
-    
+
+    .input{
+      height: 10px;
+    }
+
+
   }
-
-  input:focus{
-    outline: none;
-}
 
 
 }
