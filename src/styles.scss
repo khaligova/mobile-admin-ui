@@ -1,15 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    font-family: "Italic";
-    src:url("./assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");    
+* {
+  font-family: "Arimo-Regular";
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Arimo-Regular";
+    src: url("assets/fonts/Arimo-Regular.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.min.css";
 @import "../src/styles/primeng-customization.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";

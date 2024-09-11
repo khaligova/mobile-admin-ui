@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { IToastInterface } from '../../../../../messages/toast/itoast-interface';
 
 
 @Component({
@@ -12,5 +13,11 @@ import { FloatLabelModule } from 'primeng/floatlabel';
   styleUrl: './login-page.component.scss'
 })
 export class LoginPageComponent {
+   constructor(private toastService:IToastInterface){
 
+   }
+
+   show(){
+    this.toastService.GetSuccessToastMessage();
+   }
 }
