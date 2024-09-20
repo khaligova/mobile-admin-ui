@@ -22,7 +22,7 @@ export class PrimeNgToasterService extends ToasterBase {
     this.messageService.add({severity:'info',summary:title,detail:message,})   
   }
   override showDanger(message: string, title: string) {
-    this.messageService.add({severity:'danger',summary:title,detail:message,})   
+    this.messageService.add({severity:'error',summary:title,detail:message,})   
   }
 
 

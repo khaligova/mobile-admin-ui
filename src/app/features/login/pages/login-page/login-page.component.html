@@ -7,10 +7,10 @@
     <div class="login-side">
       <div class="label">Log in</div> 
       <p-floatLabel class="w-full">
-        <input pInputText id="secret-key"  />
+        <input type="text" pInputText id="secret-key"  [(ngModel)]="secretKey" />
         <label for="secret-key">Secret key</label>
     </p-floatLabel>
-    <p-button label="Login" [raised]="true" class="w-full"  (onClick)="show()"/>
+    <p-button label="Login" [raised]="true" class="w-full" (onClick)="login()"/>
     </div>
   </div>
 
