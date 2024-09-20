@@ -14,6 +14,6 @@ export class NotFoundPageComponent {
 
 
   goToHome():void{
-     this._router.navigate(['/auth']);
+     this._router.navigate(['/home']);
   }
 }

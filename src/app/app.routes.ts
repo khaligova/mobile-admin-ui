@@ -3,6 +3,7 @@ import { LoginPageComponent } from './features/login/pages/login-page/login-page
 import { EmptyLayoutComponent } from './layouts/empty-layout/empty-layout.component';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { NotFoundPageComponent } from './features/unavailable-route/pages/not-found-page/not-found-page.component';
+import { HomePageComponent } from './features/home/pages/home-page/home-page.component';
 
 export const routes: Routes = [
   {
@@ -17,7 +18,10 @@ export const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
-    children: [],
+    children: [
+      {path:'',component:HomePageComponent},
+      {path:'home',component:HomePageComponent},
+    ],
   },
   { path: '**', component: NotFoundPageComponent },
 ];

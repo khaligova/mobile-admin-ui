@@ -1,3 +1,5 @@
+@import '../../../../../styles/colors.scss';
+
 .page {
   width: 100%;
   height: 100vh;
@@ -7,8 +9,7 @@
 
   .left {
     //border: 1px solid red;
-    background: rgb(5, 44, 81);
-    background: radial-gradient(circle, rgba(5, 44, 81, 1) 38%, rgba(14, 64, 143, 1) 78%);
+    background: radial-gradient(circle, $primary950 38%, $primary900 78%);
 
     display: flex;
     flex-direction: row;

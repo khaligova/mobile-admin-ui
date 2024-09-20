@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { ToasterBase } from './toaster-base';
+import { BaseToasterService } from './base-toaster.service';
 
 @Injectable()
 
-export class PrimeNgToasterService extends ToasterBase {
+export class PrimeNgToasterService extends BaseToasterService {
 
   constructor(private messageService: MessageService) {
     super();

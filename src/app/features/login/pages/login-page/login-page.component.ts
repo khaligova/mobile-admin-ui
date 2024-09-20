@@ -3,32 +3,36 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { PrimeNgToasterService } from '../../../../../core/toaster/primeng-toaster.service';
-import { ToasterBase } from '../../../../../core/toaster/toaster-base';
+import { BaseToasterService } from '../../../../../core/toaster/base-toaster.service';
 import { UserBaseService } from '../../../../services/back-end-services/users/user-base.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginResponse } from '../../../../services/back-end-services/users/models/responses/login-response';
+import { BaseSpinnerService } from '../../../../../core/spinner/base-spinner.service';
+import { Router } from '@angular/router';
+import { NavbarComponent } from '../../../../layouts/default-layout/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [InputTextModule, ButtonModule, FloatLabelModule, FormsModule],
+  imports: [InputTextModule, ButtonModule, FloatLabelModule, FormsModule,NavbarComponent],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.scss',
 })
 export class LoginPageComponent {
   secretKey: string = ``;
+  enableLoader: boolean = false;
   constructor(
-    private readonly _toasterService: ToasterBase,
-    private _userService: UserBaseService
-  ) {}
+    private readonly _toasterService: BaseToasterService,
+    private readonly _userService: UserBaseService,
+    private readonly _spinnerService: BaseSpinnerService,
+    private readonly _router: Router
+  ) { }
 
   public async login(): Promise<void> {
-    console.log('showdeyem men nicesen' + this.secretKey);
-    // this._toasterService.showSuccess(
-    //   'Apiden evvel',
-    //   'apiye request atacam indi'
-    // );
+    this._spinnerService.show();
     let response: LoginResponse = await this._userService.login(this.secretKey);
-    console.log("response yazdir:"+ response + '  ' + response.name);
+    this._spinnerService.hide();
+    localStorage.setItem("name", response.name);
+    this._router.navigate(["/home"]);
   }
 }

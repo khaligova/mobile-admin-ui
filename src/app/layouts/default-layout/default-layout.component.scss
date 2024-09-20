@@ -1,0 +1,27 @@
+.layout{
+    //border: solid 1px rgb(206, 22, 52);
+    display: flex;
+    flex-direction: row;
+
+    .left{
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        border: solid 1px blue;
+        height: 100vh;
+    }
+
+    .right{
+        border: solid 1px blueviolet;
+        flex: 1;
+        .navbar{
+            // border: solid 1px yellowgreen;
+            padding: 16px;
+        }
+
+        .renderbody{
+            border: solid 1px orange;
+        }
+
+    }
+}
