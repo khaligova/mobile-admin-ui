@@ -4,15 +4,16 @@
     flex-direction: row;
 
     .left{
+        // border: solid 1px blue;
         position: sticky;
         top: 0px;
         left: 0px;
-        border: solid 1px blue;
         height: 100vh;
+        padding: 14px;
     }
 
     .right{
-        border: solid 1px blueviolet;
+        // border: solid 1px blueviolet;
         flex: 1;
         .navbar{
             // border: solid 1px yellowgreen;
@@ -20,7 +21,7 @@
         }
 
         .renderbody{
-            border: solid 1px orange;
+            // border: solid 1px orange;
         }
 
     }

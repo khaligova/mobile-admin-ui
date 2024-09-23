@@ -1,1 +1,30 @@
-<p>sidebar works!</p>
+<div class="sidebar">
+    <div class="head">
+        <img src="../../../../../assets/logos/brand-logo.svg" alt="brand-logo">
+    </div>
+    <div class="body">
+        @for (item of items; track $index) {
+
+        <div class="item">
+            <i [class]="'bi bi-'+item.icon"></i>
+
+            @if (!collapsed) {
+            <span class="name">{{item.name}}</span>
+            }
+        </div>
+        }
+
+
+    </div>
+    <div class="footer">
+        <div class="item">
+            <i class="bi bi-gear-wide-connected"></i>
+            @if(!collapsed){
+                <span class="name">Tənzimləmələr</span>
+            }
+        </div>
+    </div>
+    <div class="collapser" (click)="collapse()">
+        <i [class]="'bi bi-chevron-'+(collapsed?'right':'left')"></i>
+    </div>
+</div>
