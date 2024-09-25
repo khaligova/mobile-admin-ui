@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-  font-family: "Arimo-Regular";
+  font-family: "Inter";
 }
 
 body {
@@ -10,11 +10,10 @@ body {
 }
 
 @font-face {
-    font-family: "Arimo-Regular";
-    src: url("assets/fonts/Arimo-Regular.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
+    font-family: "Inter";
+    src: url("assets/fonts/Inter.ttf") format("truetype");
   }
+  
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.min.css";
 @import "../src/styles/primeng-customization.scss";

@@ -36,6 +36,6 @@ export const appConfig: ApplicationConfig = {
     { provide: BaseSpinnerService, useClass: NgxxSpinnerService },
     // { provide: ErrorHandler, useClass: ExceptionHandling },
     { provide: HTTP_INTERCEPTORS, useClass: ExceptionHandlingInterceptor, multi: true },
-
+    { provide: "api-base-url", useValue: "http://localhost:5269" }
   ],
 };
