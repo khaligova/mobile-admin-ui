@@ -33,6 +33,7 @@ export class LoginPageComponent {
     let response: LoginResponse = await this._userService.login(this.secretKey);
     this._spinnerService.hide();
     localStorage.setItem("name", response.name);
+    localStorage.setItem("secretKey",this.secretKey);
     this._router.navigate(["/home"]);
   }
 }

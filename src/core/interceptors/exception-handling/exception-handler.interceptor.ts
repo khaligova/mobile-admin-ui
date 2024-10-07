@@ -41,7 +41,6 @@ export class ExceptionHandlingInterceptor implements HttpInterceptor {
   }
 
   handle401Error(problemDetail: ProblemDetail) {
-
   }
 
   handle422Error(problemDetail: ProblemDetail) {
