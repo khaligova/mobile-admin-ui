@@ -1,0 +1,11 @@
+@import '../styles/colors.scss';
+
+.indicator{
+    margin-left: 10px;
+    color: $primary600;
+}
+
+.highlight-primary{
+    color: $primary600;
+    font-weight: 600;
+}

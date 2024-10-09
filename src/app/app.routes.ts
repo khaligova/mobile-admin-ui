@@ -4,7 +4,8 @@ import { EmptyLayoutComponent } from './layouts/empty-layout/empty-layout.compon
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { NotFoundPageComponent } from './features/unavailable-route/pages/not-found-page/not-found-page.component';
 import { HomePageComponent } from './features/home/pages/home-page/home-page.component';
-import { VersionsPageComponent } from './features/versions/pages/versions-page/versions-page.component';
+import { SeeVersionsPageComponent } from './features/see-versions/pages/see-versions-page/see-versions-page.component';
+import { CreateVersionPageComponent } from './features/create-version/pages/create-version-page/create-version-page.component';
 
 export const routes: Routes = [
   {
@@ -22,7 +23,8 @@ export const routes: Routes = [
     children: [
       {path:'',component:HomePageComponent},
       {path:'home',component:HomePageComponent},
-      {path:'versions',component:VersionsPageComponent}
+      {path:'versions',component:SeeVersionsPageComponent},
+      {path:'create-version',component:CreateVersionPageComponent}
     ],
   },
   { path: '**', component: NotFoundPageComponent },

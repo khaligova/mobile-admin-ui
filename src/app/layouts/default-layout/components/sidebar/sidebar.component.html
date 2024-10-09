@@ -5,7 +5,7 @@
     <div class="body">
         @for (item of items; track $index) {
 
-        <div class="item">
+        <div class="item" (click)="navigateTo(item.link)">
             <i [class]="'bi bi-'+item.icon"></i>
 
             @if (!collapsed) {
