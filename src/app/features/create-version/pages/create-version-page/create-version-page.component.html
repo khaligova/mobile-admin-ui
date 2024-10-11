@@ -1,3 +1,21 @@
-<div class="page">
-    asd
+<div class="form-page">
+    <div class="grid mb-2">
+        <div class="col flex flex-column">
+            <label required class="mb-1">Major</label>
+            <p-inputNumber class="w-full" [min]="0" [max]="100"/>
+        </div>
+        <div class="col flex flex-column">
+            <label required class="mb-1">Minor</label>
+            <p-inputNumber class="w-full" [min]="0" [max]="100"/>
+        </div>
+        <div class="col flex flex-column">
+            <label required class="mb-1">Patch</label>
+            <p-inputNumber class="w-full" [min]="0" [max]="100"/>
+        </div>
+    </div>
+
+    <div class="flex flex-column">
+        <label class="mb-1">Token</label>
+        <p-inputMask class="w-full" mask="********-****-****-****-************"/>
+    </div>
 </div>

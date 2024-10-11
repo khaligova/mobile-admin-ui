@@ -16,6 +16,19 @@ p-button.w-full {
     }
 }
 
+p-inputNumber.w-full{
+
+    span.p-inputnumber{
+        width: 100%;
+    }
+}
+
+p-inputMask.w-full{
+    input{
+        width: 100%;
+    }
+}
+
 p-paginator{
     button{
         border-radius: 12px;
